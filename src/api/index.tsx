@@ -1,8 +1,12 @@
 import {
+  API_URL_DEVELOP_AVALANCHE_MAINNET,
+  API_URL_DEVELOP_FUJI,
   API_URL_DEVELOP_MAINNET,
   API_URL_DEVELOP_POLYGON,
   API_URL_DEVELOP_RINKEBY,
   API_URL_DEVELOP_XDAI,
+  API_URL_PRODUCTION_AVALANCHE_MAINNET,
+  API_URL_PRODUCTION_FUJI,
   API_URL_PRODUCTION_MAINNET,
   API_URL_PRODUCTION_POLYGON,
   API_URL_PRODUCTION_RINKEBY,
@@ -31,6 +35,16 @@ function createAdditionalServiceApi(): AdditionalServicesApi {
       networkId: 137,
       url_production: API_URL_PRODUCTION_POLYGON,
       url_develop: API_URL_DEVELOP_POLYGON,
+    },
+    {
+      networkId: 43113,
+      url_production: API_URL_PRODUCTION_FUJI,
+      url_develop: API_URL_DEVELOP_FUJI,
+    },
+    {
+      networkId: 43114,
+      url_production: API_URL_PRODUCTION_AVALANCHE_MAINNET,
+      url_develop: API_URL_DEVELOP_AVALANCHE_MAINNET,
     },
   ]
   if (API_URL_DEVELOP_RINKEBY)

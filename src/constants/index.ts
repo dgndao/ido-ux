@@ -13,6 +13,8 @@ export const chainNames = {
   4: 'Rinkeby',
   100: 'xDai',
   137: 'Polygon',
+  43113: 'Fuji testnet',
+  43114: 'Avalanche mainnet',
 }
 
 export const explorerNames = {
@@ -20,6 +22,8 @@ export const explorerNames = {
   4: 'Etherscan',
   100: 'Blockscout',
   137: 'Polyscan',
+  43113: 'Snowtrace',
+  43114: 'Snowtrace',
 }
 
 export const unwrapMessage = {
@@ -27,6 +31,8 @@ export const unwrapMessage = {
   4: `Unwrap WETH to ETH on Uniswap`,
   100: `Unwrap WXDAI to XDAI on Honeyswap`,
   137: `Unwrap WMATIC to MATIC on Quickswap`,
+  43113: `Unwrap WAVAX to AVAX on TraderJoe`,
+  43114: `Unwrap WAVAX to AVAX on TraderJoe`,
 }
 
 const MAINNET_WALLETS = {

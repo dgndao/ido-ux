@@ -414,6 +414,14 @@ const OrderPlacement: React.FC<OrderPlacementProps> = (props) => {
                     ? window.open(
                         `https://quickswap.exchange/#/swap?inputCurrency=${biddingToken.address}`,
                       )
+                    : chainId == 43113
+                    ? window.open(
+                        `https://traderjoexyz.com/trade?inputCurrency=${biddingToken.address}`,
+                      )
+                    : chainId == 43114
+                    ? window.open(
+                        `https://traderjoexyz.com/trade?inputCurrency=${biddingToken.address}`,
+                      )
                     : window.open(
                         `https://app.uniswap.org/#/swap?inputCurrency=${biddingToken.address}`,
                       ),

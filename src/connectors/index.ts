@@ -32,8 +32,8 @@ export const injected = new InjectedConnector({
 })
 
 export const walletconnect = {
-  1: new WalletConnectConnector({
-    rpc: { 1: NETWORK_CONFIGS[1].rpc },
+  43114: new WalletConnectConnector({
+    rpc: { 43114: NETWORK_CONFIGS[43114].rpc },
     bridge: 'https://safe-walletconnect.gnosis.io',
     qrcode: true,
     pollingInterval: POLLING_INTERVAL,
@@ -46,6 +46,12 @@ export const walletconnect = {
   }),
   137: new WalletConnectConnector({
     rpc: { 137: NETWORK_CONFIGS[137].rpc },
+    bridge: 'https://safe-walletconnect.gnosis.io',
+    qrcode: true,
+    pollingInterval: POLLING_INTERVAL,
+  }),
+  1: new WalletConnectConnector({
+    rpc: { 1: NETWORK_CONFIGS[1].rpc },
     bridge: 'https://safe-walletconnect.gnosis.io',
     qrcode: true,
     pollingInterval: POLLING_INTERVAL,

@@ -11,6 +11,8 @@ import easyAuctionABI from '../constants/abis/easyAuction/easyAuction.json'
 import ERC20_ABI from '../constants/abis/erc20.json'
 import ERC20_BYTES32_ABI from '../constants/abis/erc20_bytes32.json'
 import {
+  NETWORK_URL_AVALANCHE_MAINNET,
+  NETWORK_URL_FUJI,
   NETWORK_URL_MAINNET,
   NETWORK_URL_POLYGON,
   NETWORK_URL_RINKEBY,
@@ -34,6 +36,8 @@ export enum ChainId {
   RINKEBY = 4,
   XDAI = 100,
   MATIC = 137,
+  FUJI = 43113,
+  AVAX = 43114,
 }
 
 export const EASY_AUCTION_NETWORKS: { [chainId in ChainId]: string } = {
@@ -41,6 +45,8 @@ export const EASY_AUCTION_NETWORKS: { [chainId in ChainId]: string } = {
   [ChainId.RINKEBY]: '0xC5992c0e0A3267C7F75493D0F717201E26BE35f7',
   [ChainId.XDAI]: '0x0b7fFc1f4AD541A4Ed16b40D8c37f0929158D101',
   [ChainId.MATIC]: '0x0b7fFc1f4AD541A4Ed16b40D8c37f0929158D101',
+  [ChainId.FUJI]: '0xa5cd8D8effACB7Ad861e3797404924199D1463a5',
+  [ChainId.AVAX]: '0xb5D00F83680ea5E078e911995c64b43Fbfd1eE61',
 }
 
 export const DEPOSIT_AND_PLACE_ORDER: { [chainId in ChainId]: string } = {
@@ -48,6 +54,8 @@ export const DEPOSIT_AND_PLACE_ORDER: { [chainId in ChainId]: string } = {
   [ChainId.RINKEBY]: '0x8624fbDf455D51B967ff40aaB4019281A855f008',
   [ChainId.XDAI]: '0x845AbED0734e39614FEC4245F3F3C88E2da98157',
   [ChainId.MATIC]: '0x93D2BbA07b44e8F2b02F7DA164eE4f7442a3B618',
+  [ChainId.FUJI]: '0x39cbA0cC28EE67EAa8134C0e80a061c13EBC3603',
+  [ChainId.AVAX]: '0x193c8993480DF4c1dBBdB39dB07511f7D789cedb',
 }
 
 type NetworkConfig = {
@@ -82,6 +90,18 @@ export const NETWORK_CONFIGS: { [chainId in ChainId]: NetworkConfig } = {
     symbol: 'MATIC',
     rpc: NETWORK_URL_POLYGON,
     explorer: 'https://polygonscan.com',
+  },
+  43113: {
+    name: 'Fuji Testnet',
+    symbol: 'AVAX',
+    rpc: NETWORK_URL_FUJI,
+    explorer: 'https://snowtrace.io',
+  },
+  43114: {
+    name: 'Avalanche Mainnet',
+    symbol: 'AVAX',
+    rpc: NETWORK_URL_AVALANCHE_MAINNET,
+    explorer: 'https://snowtrace.io',
   },
 }
 
@@ -230,6 +250,7 @@ export function getTokenDisplay(token: Token, chainId: ChainId): string {
   if (isTokenXDAI(token.address, chainId)) return `XDAI`
   if (isTokenWETH(token.address, chainId)) return `ETH`
   if (isTokenWMATIC(token.address, chainId)) return `MATIC`
+
   return (
     token?.symbol?.slice(0, 7) || token?.name?.slice(0, 7) || token?.address.slice(0, 7) || '🤔'
   )
