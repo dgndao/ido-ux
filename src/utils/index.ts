@@ -95,7 +95,7 @@ export const NETWORK_CONFIGS: { [chainId in ChainId]: NetworkConfig } = {
     name: 'Fuji Testnet',
     symbol: 'AVAX',
     rpc: NETWORK_URL_FUJI,
-    explorer: 'https://snowtrace.io',
+    explorer: 'https://testnet.snowtrace.io',
   },
   43114: {
     name: 'Avalanche Mainnet',

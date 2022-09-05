@@ -49,7 +49,7 @@ jobs:
       - name: Build Web Apps
         run: yarn build
         env:
-          REACT_APP_NETWORK_URL_XDAI: https://rpc.xdaichain.com/
+          REACT_APP_NETWORK_URL_XDAI: https://rpc.gnosischain.com/
           REACT_APP_ADDITIONAL_SERVICES_API_URL_XDAI: https://ido-api-xdai.gnosis.io/
           REACT_APP_NETWORK_URL_RINKEBY: https://rinkeby.infura.io/v3/${{ secrets.INFURA_PROJECT_KEY_DEV }}
           REACT_APP_ADDITIONAL_SERVICES_API_URL_RINKEBY: https://ido-api-rinkeby.gnosis.io/

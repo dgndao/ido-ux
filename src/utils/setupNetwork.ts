@@ -16,7 +16,7 @@ export const setupNetwork = async (chainId: ChainId) => {
                 symbol: 'xDai',
                 decimals: 18,
               },
-              rpcUrls: ['https://rpc.xdaichain.com/'],
+              rpcUrls: ['https://rpc.gnosischain.com/'],
               blockExplorerUrls: ['https://blockscout.com/xdai/mainnet'],
             },
           ],

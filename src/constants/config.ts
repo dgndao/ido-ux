@@ -26,7 +26,7 @@ export const NETWORK_URL_MAINNET = process.env.REACT_APP_NETWORK_URL_MAINNET || 
 export const NETWORK_URL_POLYGON =
   process.env.REACT_APP_NETWORK_URL_POLYGON || 'https://polygon-rpc.com'
 export const NETWORK_URL_XDAI =
-  process.env.REACT_APP_NETWORK_URL_XDAI || 'https://rpc.xdaichain.com/'
+  process.env.REACT_APP_NETWORK_URL_XDAI || 'https://rpc.gnosischain.com/'
 export const NETWORK_URL_FUJI =
   process.env.REACT_APP_NETWORK_URL_FUJI || 'https://api.avax-test.network/ext/bc/C/rpc'
 export const NETWORK_URL_AVALANCHE_MAINNET =
